@@ -4,14 +4,7 @@
 #include "types.h"
 #include "common.h"
 
-/* Function Definitions */
 
-/* Get image size
- * Input: Image file ptr
- * Output: width * height * bytes per pixel (3 in our case)
- * Description: In BMP Image, width is stored in offset 18,
- * and height after that. size is 4 bytes
- */
 
 Status read_and_validate_encode_args(char *argv[], EncodeInfo *encInfo)
 {
@@ -235,68 +228,7 @@ Status do_encoding(EncodeInfo *encInfo)
 
 
 
-    //Status encode_byte_to_lsb(char data, char *image_buffer);
-    /*
-    for i=0 to 8;
-    image buffer is char array
-    image buffer[i]=image buffer[i]&(~1);
-    clear that
-    char get (data & 1<<i)>>i;
-
-    return e succes
-    */
-
-   /*
-   Status encode_data_to_image(char *data, int size, FILE *fptr_src_image, FILE *fptr_stego_image);
-   char arr[8];
-   loop i=0 to size times
-   fread(arr,8,1,fptr_src);
-   encode_byte_datalsb(data[i],arr);
-   fwrite(arr,8,1,fptr_stego);
-   */
-   /*
-   Status integer_to_lsb(int data, char *image buffer);
-    for i=0 to 32  because integer;
-    image buffer is char array
-    image buffer[i]=image buffer[i]&(~1);
-    clear that
-    char get (data & 1<<i)>>i;
-
-   */
-
-
-    //encode_magic_string() == e_failure -> error -> return e_failure
-
-    /*
-    call encode file extension size fun
-    char arr[32];
-    int size=strlen(file_ext);
-    fread(arr,32,1,fptr src image);
-    encode_int_data(size,arr);
-    fwriet(arr,32,1,fptr image);
-    */
-
-    /*
-    Status encode_secret_file_extn(const char *file_extn, EncodeInfo *encInfo);
-    call Status encode_data_to_image(char *data, int size, FILE *fptr_src_image, FILE *fptr_stego_image);
-   char arr[8];
-   loop i=0 to size times
-   fread(arr,8,1,fptr_src);
-   encode_byte_datalsb(data[i],arr);
-   fwrite(arr,8,1,fptr_stego);
-   return e success
-    */
-
-    /*
-    call Status encode_secret_file_size(long file_size, EncodeInfo *encInfo);
-    */
-   /*
-   call Status encode_secret_file_data(EncodeInfo *encInfo);
-   */
-
-   /*
-   Status copy_remaining_img_data(FILE *fptr_src, FILE *fptr_dest);
-   */
+    
   return e_success;
 }
 
